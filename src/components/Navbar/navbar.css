@@ -15,8 +15,8 @@
     border-right:12px solid  #8DC26F;
 } 
 .itemList{
-    display: flex!important;
-    padding:10px 15%;
+    display: flex;
+    padding:10px;
     
     justify-content: center;
     align-items: flex-end;
