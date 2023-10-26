@@ -1,0 +1,18 @@
+#cartWidget{
+    height: 60px;
+    width: 60px;
+    padding-right: 6px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    color: red;
+    font-weight: 900;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito{
+    width: 40px;
+}

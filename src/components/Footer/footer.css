@@ -1,0 +1,16 @@
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding:22px 18px;
+    height: 8px;
+    color:#8DC26F;
+    background-color: #242424;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+div{
+
+}
