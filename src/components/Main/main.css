@@ -1,0 +1,17 @@
+.main{
+display: flex;
+justify-content: flex-start;
+
+}
+
+.mainUl{
+    display: flex;
+    flex-direction: column;
+    
+    padding: 18px;
+}
+
+.mainUlLi{
+    list-style: none;
+    margin: 18px;
+}
