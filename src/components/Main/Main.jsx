@@ -1,22 +1,23 @@
 import './main.css'
 import ItemLisContainer from './ItemListContainer/ItemListContainer'
+import CategoryListContainer from './categoryListContainer/CategoryListContainer'
+import {Container,Row,Col} from 'react-bootstrap'
+
 
 function Main() {
-let saludo="Bienvenidos a esta hermosa tienda!"
 
   return (
-    <main className='main'>
-    <ItemLisContainer greeting={saludo}/>
+    <Container >
+    <Row className='p-2 bg-primary' >
         <ul className='mainUl'>
-            <li className='mainUlLi'><a href='/Mates'>Mates</a></li>
-            <li className='mainUlLi'><a href='/Termos'>Termos</a></li>
-            <li className='mainUlLi'><a href='/Bombillas'>Bombillas</a></li>
-            <li className='mainUlLi'><a href='/Accesorios'>Accesorios</a></li>
+          <CategoryListContainer/>
         </ul>
+    </Row>
+    <Row>
+    <ItemLisContainer className='p-4 bg-secondary' />
+    </Row>
 
-
-    </main>
-
+    </Container>
   )
 }
 
