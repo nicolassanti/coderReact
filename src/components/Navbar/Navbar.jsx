@@ -12,7 +12,6 @@ const Navbar = ()=>{
          <Brand/>
             <ul className="itemList">
              <ListItem>Inicio</ListItem>
-             <ListItem>Productos</ListItem>
              <ListItem>Nosotros</ListItem>
             </ul>
             <CartWidget/>

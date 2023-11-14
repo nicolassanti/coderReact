@@ -8,13 +8,11 @@ function ItemListContainer() {
 
   useEffect(() => {
     
-    fetch('https://fakestoreapi.com/products')
+   fetch('./data/products.json')
             .then(res=>res.json())
             .then(json=>setProductos(json))
-  }, [])
-  
-
-
+    }, [])
+          
   return (
     
     <ul className='d-flex flex-wrap'>
@@ -22,12 +20,13 @@ function ItemListContainer() {
       productos.length==0?
       <p>Cargando productos....</p>
       :
-      <Item prods={productos}/>
+      productos.map((product,indice)=>{
+        return(
+            <Item key={indice} prod={product}/>
+        )
+      })
     }
-
     </ul>
-
-
   )
 }
 

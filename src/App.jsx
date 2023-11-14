@@ -2,7 +2,9 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Main from './components/Main/Main'
 import Footer from './components/Footer/Footer'
-
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Error404 from './components/Error/Error404'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
  
@@ -10,7 +12,13 @@ function App() {
 
     <>
       <Navbar/>
-      <Main/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main/>}/>
+          <Route path="/item/:prodId" element={<ItemDetailContainer/>}/>
+          <Route path="*" element={<Error404/>}/>
+        </Routes>
+      </BrowserRouter>
       <Footer/>
     </>
   )

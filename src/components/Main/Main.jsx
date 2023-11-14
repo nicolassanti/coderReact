@@ -1,23 +1,22 @@
 import './main.css'
-import ItemLisContainer from './ItemListContainer/ItemListContainer'
+import ItemListContainer from './ItemListContainer/ItemListContainer'
 import CategoryListContainer from './categoryListContainer/CategoryListContainer'
-import {Container,Row,Col} from 'react-bootstrap'
+import {Row,Col} from 'react-bootstrap'
 
 
 function Main() {
 
   return (
-    <Container >
-    <Row className='p-2 bg-primary' >
-        <ul className='mainUl'>
-          <CategoryListContainer/>
-        </ul>
+    <>
+    <Row className="justify-content-md-center">
+      <Col xs lg="8">   
+          <CategoryListContainer className='mt-4'/>
+      </Col>
+      <Col md="auto">
+        <ItemListContainer/>
+      </Col>
     </Row>
-    <Row>
-    <ItemLisContainer className='p-4 bg-secondary' />
-    </Row>
-
-    </Container>
+    </>
   )
 }
 
