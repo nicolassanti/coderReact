@@ -10,11 +10,11 @@ function Main() {
     <>
     <Col className="justify-content-md-center">
       <Row>   
-        <Col>
+        <Col className='d-flex justify-content-center'>
           <CategoryListContainer className='mt-4'/>
         </Col>
       </Row>
-      <Row >
+      <Row className='d-flex justify-content-evenly'>
         <ItemListContainer/>
       </Row>
     </Col>
