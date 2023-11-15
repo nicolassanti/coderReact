@@ -1,0 +1,66 @@
+[
+    {
+      "id":"1",
+      "title": "Bombilla pico loro",
+      "price": 12.32,
+      "category": "Bombillas",
+      "description": "Bombilla para mate",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_2X_877270-MLA54406382537_032023-F.webp",
+      "qty": 10
+    },
+    {
+      "id":"2",
+      "title": "Bombilla Alpaca",
+      "price": 29,
+      "category": "Bombillas",
+      "description": "Hermosa bombilla de alpaca",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_983405-MLA54837216864_042023-O.webp",
+      "qty": 12
+    },
+    {
+        "id":"3",
+        "title": "Bombillas de acero",
+        "price": 19.99,
+        "category": "Bombillas",
+        "description": "Bombilla Acero inoxidable chata APA CUERO con dije de bronce.",
+        "image": "https://http2.mlstatic.com/D_NQ_NP_726076-MLA72218344119_102023-O.webp",
+        "qty": 5
+    },
+    {
+      "id":"4",
+      "title": "Bombillas de acero",
+      "price": 19.99,
+      "category": "Mates",
+      "description": "Mate tipo torpedo forrado en cuero. (Sin bombilla)",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_725450-MLA54911265200_042023-O.webp",
+      "qty": 10
+    },
+    {
+      "id":"5",
+      "title": "Mate Imperial Crudo",
+      "price": 19.99,
+      "category": "Mates",
+      "description": "Mate Imperial Crudo , Virola y base de alpaca Cincelada. (Sin Bombilla)",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_964750-MLA69776147587_062023-O.webp",
+      "qty": 8
+    },
+    {
+      "id":"6",
+      "title": "Mochila matera impermeable",
+      "price": 134.50,
+      "category": "Materas",
+      "description": "Mochila matera impermeable. No se mancha. Costuras reforzadas",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_2X_664904-MLA71754651698_092023-F.webp",
+      "qty": 5
+    },
+    {
+      "id":"7",
+      "title": "Bolso matero cuero",
+      "price": 134.50,
+      "category": "Materas",
+      "description": "Matera tipo Canasta 100% Cuero. Resistente, robusta y elegante.",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_918111-MLA70966224112_082023-O.webp",
+      "qty": 6
+    }
+  ]
+  
