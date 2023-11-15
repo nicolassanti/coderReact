@@ -1,6 +1,6 @@
 import './main.css'
-import ItemListContainer from './ItemListContainer/ItemListContainer'
-import CategoryListContainer from './categoryListContainer/CategoryListContainer'
+import ItemListContainer from '../ItemListContainer/ItemListContainer'
+import CategoryListContainer from '../categoryListContainer/CategoryListContainer'
 import {Row,Col} from 'react-bootstrap'
 
 
@@ -8,14 +8,16 @@ function Main() {
 
   return (
     <>
-    <Row className="justify-content-md-center">
-      <Col xs lg="8">   
+    <Col className="justify-content-md-center">
+      <Row>   
+        <Col>
           <CategoryListContainer className='mt-4'/>
-      </Col>
-      <Col md="auto">
+        </Col>
+      </Row>
+      <Row >
         <ItemListContainer/>
-      </Col>
-    </Row>
+      </Row>
+    </Col>
     </>
   )
 }
