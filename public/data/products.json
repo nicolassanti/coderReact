@@ -61,6 +61,15 @@
       "description": "Matera tipo Canasta 100% Cuero. Resistente, robusta y elegante.",
       "image": "https://http2.mlstatic.com/D_NQ_NP_918111-MLA70966224112_082023-O.webp",
       "qty": 6
+    },
+    {
+      "id":"8",
+      "title": "Yerbera y Azucarera de metal",
+      "price": 50,
+      "category": "Accesorios",
+      "description": "Recipientes para yerba y azucar de metal super facheros.",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_855803-MLA47386793568_092021-O.webp",
+      "qty": 14
     }
   ]
   

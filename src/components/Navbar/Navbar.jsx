@@ -1,8 +1,7 @@
 import Brand from './Brand/Brand'
-import ListItem from "./Items/ListItems";
 import CartWidget from "./CartWidget/CartWidget"
+import CategoryListContainer from '../categoryListContainer/CategoryListContainer';
 import './navbar.css'
-import { useState , useEffect} from 'react';
 
 const Navbar = ()=>{
   
@@ -10,10 +9,7 @@ const Navbar = ()=>{
     return (
         <header className='navbar'>
          <Brand/>
-            <ul className="itemList">
-             <ListItem>Inicio</ListItem>
-             <ListItem>Nosotros</ListItem>
-            </ul>
+            <CategoryListContainer/>
             <CartWidget/>
         </header>
         )

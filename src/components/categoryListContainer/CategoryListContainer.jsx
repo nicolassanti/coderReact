@@ -1,6 +1,6 @@
 import {useState,useEffect} from 'react'
-import './categoryListContainer.css'
 import { Link } from 'react-router-dom'
+import './categoryListContainer.css'
 
 function CategoryListContainer() {
  
@@ -21,11 +21,11 @@ function CategoryListContainer() {
     <>
     {
       categorias.length==0?
-      <p>Cargando categorias...</p>
+      <div className="spinner-border text-dark"></div>
       :
       categorias.map((categoria,indice) =>{
         return(
-          <span key={indice} className='listItem'><Link  className='h-75' to={categoria}>{categoria.toUpperCase()}</Link></span>
+          <div key={indice} className='listItem'><Link  className='listItemStyle' to={categoria}>{categoria.toUpperCase()}</Link></div>
         )
     })
     }

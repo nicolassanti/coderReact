@@ -1,34 +1,38 @@
 import { useState,useEffect } from 'react'
 import Item from '../Item/Item'
 import './itemListContainer.css'
+import { useParams } from 'react-router-dom'
 
 function ItemListContainer() {
 
   const[productos,setProductos] = useState([])
-  const[categorias,setCategorias] = useState([])
+  const {categoryId} = useParams()
 
   useEffect(() => {
     
    fetch('./data/products.json')
             .then(res=>res.json())
             .then(productos=>{
-              const categorias=productos.map(producto=> producto.category);
-              const categoriasUnicas=[...new Set(categorias)];
-              setCategorias(categoriasUnicas)
-              setProductos(productos)
+              if (categoryId) {
+                const prodFiltrados=productos.filter((p)=>p.category === categoryId)
+                console.log("le filtree",prodFiltrados)
+              /setProductos(prodFiltrados)                
+              } else {
+                setProductos(productos)
+              }
             })
-    }, [])
+    }, [categoryId])
           
   return (
     
     <>
     {
       productos.length==0?
-      <p>Cargando productos....</p>
+      <div className="spinner-border text-success"></div>
       :
       productos.map((product,indice)=>{
         return(
-            <Item className='sarasa' key={indice} prod={product}/>
+            <Item className='d-flex flex-row flex-wrap' key={indice} prod={product}/>
         )
       })
     }

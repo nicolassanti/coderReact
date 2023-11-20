@@ -1,5 +1,9 @@
 .listItem{
     list-style: none;
+    padding: 0 2rem;
+}
+
+.listItemStyle{
+    color: black;
     text-decoration: none;
-    padding: 4rem;
 }
