@@ -1,20 +1,20 @@
-import './main.css'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import CategoryListContainer from '../categoryListContainer/CategoryListContainer'
 import {Row,Col} from 'react-bootstrap'
+import './main.css'
 
 
 function Main() {
 
   return (
     <>
-    <Col className="justify-content-md-center">
-      <Row>   
+    <Col className="justify-content-md-center h-75">
+      <Row >   
         <Col className='d-flex justify-content-center'>
-          <CategoryListContainer className='mt-4'/>
+          <CategoryListContainer/>
         </Col>
       </Row>
-      <Row className='d-flex justify-content-evenly'>
+      <Row className='d-flex justify-content-evenly flex-wrap'>
         <ItemListContainer/>
       </Row>
     </Col>

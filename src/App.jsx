@@ -16,10 +16,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path="/item/:prodId" element={<ItemDetailContainer/>}/>
+          <Route path="/item/detail/:prodId" element={<ItemDetailContainer/>}/>
           <Route path="*" element={<Error404/>}/>
         </Routes>
       </BrowserRouter>
-      <Footer/>
     </>
   )
 }

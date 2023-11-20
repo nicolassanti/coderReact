@@ -1,11 +1,21 @@
 import {Card} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import Contador from '../Contador/Contador';
+import './item.css'
+
+
+
 function Item({prod}) {
 
   return (
     <>
-       <Card className='w-25 m-2'>
-      <Card.Img className='w-50 m-auto' variant="top" src={prod.image} />
+    <Card className=' w-25 m-1 h-auto d-flex flex-row'>
+      <section>
+      <Card.Img className='m-auto w-75' variant="top" src={prod.image} />
+      <Contador inicial={1} stock={prod.qty}/>
+      </section>
+      
+      
       <Card.Body>
         <Card.Title><Link to={`/item/${prod.id}`}>{prod.title}</Link></Card.Title>
         <Card.Text >

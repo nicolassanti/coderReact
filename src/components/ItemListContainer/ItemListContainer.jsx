@@ -28,7 +28,7 @@ function ItemListContainer() {
       :
       productos.map((product,indice)=>{
         return(
-            <Item key={indice} prod={product}/>
+            <Item className='sarasa' key={indice} prod={product}/>
         )
       })
     }
