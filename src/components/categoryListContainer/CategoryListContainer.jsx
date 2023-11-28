@@ -25,7 +25,7 @@ function CategoryListContainer() {
       :
       categorias.map((categoria,indice) =>{
         return(
-          <div key={indice} className='listItem'><NavLink activeClassName ="enlaceActivo" className='listItemStyle' to={categoria}>{categoria.toUpperCase()}</NavLink></div>
+          <div key={indice} className='listItem'><NavLink className='listItemStyle' to={categoria}>{categoria.toUpperCase()}</NavLink></div>
         )
     })
     }

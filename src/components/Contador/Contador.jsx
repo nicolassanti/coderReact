@@ -19,7 +19,7 @@ function Contador({inicial,stock}) {
 
   return (
     <>
-        <div className='d-flex-container flex-row h-25 mt-4'>
+        <div className='container d-flex flex-row mt-4'>
         <button className='btn btn-secondary' onClick={decrementar}>-</button>
         <span className='m-2'>{count}</span>
         <button className='btn btn-secondary' onClick={incrementar}>+</button>

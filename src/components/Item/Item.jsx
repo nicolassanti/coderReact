@@ -11,12 +11,12 @@ function Item({prod}) {
     <>
     <Card className=' w-25 m-1 h-auto d-flex flex-row'>
       <section>
-      <Card.Img className='m-auto w-75' variant="top" src={prod.image} />
-      <Contador inicial={1} stock={prod.qty}/>
+      <Card.Img className='w-50' variant="top" src={prod.image} />
+      <Contador className="" inicial={1} stock={prod.qty}/>
       </section>
       
       
-      <Card.Body>
+      <Card.Body className='w-50'>
         <Card.Title><Link to={`/item/${prod.id}`}>{prod.title}</Link></Card.Title>
         <Card.Text >
           {prod.description}
