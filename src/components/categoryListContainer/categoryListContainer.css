@@ -8,7 +8,9 @@
     text-decoration: none;
 }
 
-.enlaceActivo{
-    background-color: #0b1207;
-    color: #f1f8ed;
+#navContainer a.active{
+    background-color: #2d481e   ;
+    color: #c6e1b7;
+    padding: 18px;
+    border-radius: 8px;
 }

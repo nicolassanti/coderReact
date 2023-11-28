@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import './brand.css'
 
 function Brand() {
   return (
     <>
-      <Link className='brand' to={'/'}>Tuma-T</Link>
+    <div className='brand' id="brandLink">
+      <NavLink className="brandInactive"  to={'/'}>Tuma-T</NavLink>
+    </div>
     </>
   )
 }
