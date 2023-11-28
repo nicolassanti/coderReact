@@ -32,7 +32,7 @@ function ItemListContainer() {
       :
       productos.map((product,indice)=>{
         return(
-            <Item className=' ' key={indice} prod={product}/>
+            <Item key={indice} prod={product}/>
         )
       })
     }

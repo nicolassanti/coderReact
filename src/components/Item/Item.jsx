@@ -9,14 +9,14 @@ function Item({prod}) {
 
   return (
     <>
-    <Card className=' w-25 m-1 h-auto d-flex flex-row'>
+    <Card className='w-25 m-1 h-auto d-flex flex-row'>
       <section>
       <Card.Img className='w-50' variant="top" src={prod.image} />
       <Contador className="" inicial={1} stock={prod.qty}/>
       </section>
       
       
-      <Card.Body className='w-50'>
+      <Card.Body style={{ width: '34rem' }}>
         <Card.Title><Link to={`/item/${prod.id}`}>{prod.title}</Link></Card.Title>
         <Card.Text >
           {prod.description}
