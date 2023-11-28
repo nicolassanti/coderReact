@@ -25,18 +25,18 @@ function ItemListContainer() {
           
   return (
     
-    <>
+    <div className='d-flex flex-row flex-wrap justify-content-around'>
     {
       productos.length==0?
       <div className="spinner-border text-success"></div>
       :
       productos.map((product,indice)=>{
         return(
-            <Item className='d-flex flex-row flex-wrap' key={indice} prod={product}/>
+            <Item className='w-50 ' key={indice} prod={product}/>
         )
       })
     }
-    </>
+    </div>
   )
 }
 

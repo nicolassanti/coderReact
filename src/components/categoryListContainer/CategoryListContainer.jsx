@@ -1,6 +1,6 @@
 import {useState,useEffect} from 'react'
-import { Link } from 'react-router-dom'
 import './categoryListContainer.css'
+import { NavLink } from 'react-router-dom'
 
 function CategoryListContainer() {
  
@@ -25,7 +25,7 @@ function CategoryListContainer() {
       :
       categorias.map((categoria,indice) =>{
         return(
-          <div key={indice} className='listItem'><Link  className='listItemStyle' to={categoria}>{categoria.toUpperCase()}</Link></div>
+          <div key={indice} className='listItem'><NavLink activeClassName ="enlaceActivo" className='listItemStyle' to={categoria}>{categoria.toUpperCase()}</NavLink></div>
         )
     })
     }
