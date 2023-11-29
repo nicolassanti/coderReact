@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import Item from '../Item/Item'
+import ItemDetail from '../ItemDetail/ItemDetail'
 
 
 function ItemDetailContainer() {
@@ -20,7 +20,7 @@ function ItemDetailContainer() {
     
   return (
     <>
-    <Item className='d-flex flex-wrap' prod={producto}/>
+    <ItemDetail className='d-flex flex-wrap' prod={producto}/>
     </>
   )
 }

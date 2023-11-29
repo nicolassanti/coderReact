@@ -1,5 +1,5 @@
 import './cartWidget.css'
-import cartImg from '../../../assets/cart-shopping-solid.svg'
+import cartImg from '../../../assets/carrito.svg'
 
 function CartWidget() {
   return (
