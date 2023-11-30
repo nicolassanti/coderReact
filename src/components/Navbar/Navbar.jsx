@@ -5,10 +5,9 @@ import './navbar.css'
 
 const Navbar = ()=>{
   
-
     return (
         <header className='navbar'>
-         <Brand/>
+            <Brand/>
             <CategoryListContainer/>
             <CartWidget/>
         </header>

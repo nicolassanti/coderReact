@@ -3,12 +3,10 @@
     background: -webkit-linear-gradient(to top, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding:12px;    
 }
 .brand{
-    justify-content: center;
-    align-self: center;
     font-size: 28px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding:0 8%;
@@ -17,8 +15,7 @@
 .itemList{
     display: flex;
     padding:10px;
-    
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-end;
 }
 
