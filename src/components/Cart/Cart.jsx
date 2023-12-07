@@ -3,10 +3,11 @@ import { CartContext } from "../../context/cartContext";
 function Cart() {
   const [variable, setVariable] = useState(false);
 
-  const { cart ,setCart,addToCart} = useContext(CartContext);
+  const { cart ,getTotalItemsPrice,removeItems} = useContext(CartContext);
 
   return (
     <>
+      <button className="btn btn-outline-danger" onClick={()=>{removeItems()}}>Limpiar Carrito</button>
       <div className="d-flex-container flex-row flex-wrap justify-content-around">
        <strong>
       <div className="d-flex flex-row justify-content-around ">
@@ -22,10 +23,10 @@ function Cart() {
           cart.map((item, indice) => {
             return (
                 <div className="d-flex flex-row justify-content-around " key={indice}>
-                  <div>{item.title}</div>
-                  <div>{item.price}</div>
+                  <div>{item.prod.title}</div>
+                  <div>{item.prod.price}</div>
                   <div>{item.cantidad}</div>
-                  <div>{ item.price * item.cantidad}</div>
+                  <div>{ item.prod.price * item.cantidad}</div>
                 </div>
               
               
@@ -33,12 +34,11 @@ function Cart() {
           })
         )}
 
-        <strong>TOTAL CARRITO: {
-          cart.map((item)=>{
-            let total=0
-            return total =Math.round(total + (item.price*item.cantidad),2)
-          })
-        }</strong>
+        <strong>TOTAL CARRITO: 
+        {
+         () => {getTotalItemsPrice}
+        }
+        </strong>
       </div>
     </>
   );

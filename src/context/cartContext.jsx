@@ -8,10 +8,8 @@ export const CartProvider = ({children}) => {
     
     const addToCart = (item) =>{
       if (!isInCart(item.prod.id)) {
-        console.log(item);
         setCart((prev)=>[...prev,item])
       } else {
-        console.log(item);
         console.log("producto ya esta");
       /*  let itemActual= cart.filter((i)=>{
           i.id==prod.id
@@ -37,9 +35,17 @@ export const CartProvider = ({children}) => {
       });
       return total
     }
-    const removeItems = () =>{
 
+    const getTotalItemsPrice = (cart) =>{
+    console.log(cart);
     }
+
+    const removeItems = () =>{
+      alert('Removal')
+      setCart([])
+    }
+
+
   return (
     <CartContext.Provider value={{
                                 cart,
@@ -47,7 +53,8 @@ export const CartProvider = ({children}) => {
                                 addToCart,
                                 isInCart,
                                 getTotalItems,
-                                removeItems
+                                removeItems,
+                                getTotalItemsPrice
                                 }}>
         {children}
     </CartContext.Provider>

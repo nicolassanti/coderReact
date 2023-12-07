@@ -12,7 +12,6 @@ function ItemDetail({ prod }) {
   const [product, setProduct] = useState([]);
 
   const onAdd = (cantidad) => {
-    console.log("count",cantidad);
     setCant(cantidad)
     addToCart({prod,cantidad});
 
