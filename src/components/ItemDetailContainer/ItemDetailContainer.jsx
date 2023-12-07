@@ -13,7 +13,6 @@ function ItemDetailContainer() {
             .then(res =>res.json())
             .then((productos) => {
                        const prodFiltrado=productos.find((producto)=>prodId==producto.id)
-                       console.log("PF: ",prodFiltrado)
                        setProducto(prodFiltrado)
                     })
     }, [prodId])

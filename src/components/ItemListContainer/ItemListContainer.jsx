@@ -15,7 +15,6 @@ function ItemListContainer() {
             .then(productos=>{
               if (categoryId) {
                 const prodFiltrados=productos.filter((p)=>p.category === categoryId)
-                console.log("le filtree",prodFiltrados)
               /setProductos(prodFiltrados)                
               } else {
                 setProductos(productos)

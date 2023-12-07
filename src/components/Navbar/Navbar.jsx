@@ -6,7 +6,7 @@ import './navbar.css'
 const Navbar = ()=>{
   
     return (
-        <header className='navbar'>
+        <header className='navBar'>
             <Brand/>
             <CategoryListContainer/>
             <CartWidget/>
