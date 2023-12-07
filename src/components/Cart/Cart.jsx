@@ -3,7 +3,7 @@ import { CartContext } from "../../context/cartContext";
 function Cart() {
   const [variable, setVariable] = useState(false);
 
-  const { cart ,getTotalItemsPrice,removeItems} = useContext(CartContext);
+  const { cart ,getTotalItemsPrice,removeItems,removeItem} = useContext(CartContext);
 
   return (
     <>
@@ -27,6 +27,7 @@ function Cart() {
                   <div>{item.prod.price}</div>
                   <div>{item.cantidad}</div>
                   <div>{ item.prod.price * item.cantidad}</div>
+                  <button className="btn btn-danger" onClick={()=>{removeItem(item.prod.id)}}>Eliminar</button>
                 </div>
               
               

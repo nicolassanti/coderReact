@@ -39,9 +39,13 @@ export const CartProvider = ({children}) => {
     const getTotalItemsPrice = (cart) =>{
     console.log(cart);
     }
-
+    const removeItem = (id) =>{
+      let cartFiltrado= cart.filter((item) =>{
+      return  item.prod.id!==id      
+      });
+      setCart(cartFiltrado)
+    }
     const removeItems = () =>{
-      alert('Removal')
       setCart([])
     }
 
@@ -54,7 +58,8 @@ export const CartProvider = ({children}) => {
                                 isInCart,
                                 getTotalItems,
                                 removeItems,
-                                getTotalItemsPrice
+                                getTotalItemsPrice,
+                                removeItem
                                 }}>
         {children}
     </CartContext.Provider>
