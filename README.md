@@ -1,8 +1,10 @@
-# React + Vite
+# Proyecto Coder React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto corresponde al trabajo final del curso de react de coderhouse. 
 
-Currently, two official plugins are available:
+El proyecto se trata de un e-commerce de la empresa Tuma-T en el que se pueden visualizar los productos que la empresa comercializa con sus cantidades y precios. 
+Se pueden agregar productos al carrito, eliminarlos, y generar una orden de compra. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proecto esta realizado con React + Vite y firebase como base de datos. 
+
+
