@@ -52,7 +52,9 @@ function Cart() {
         <strong>TOTAL CARRITO: {totalPrice.toFixed(2)} </strong>
       </div>
       </Card>
-      <Link to={'/checkout'}>Finalizar compra </Link>
+      <Link to={'/checkout'}>
+      <button className="btn btn-outline-success mt-4" >Finalizar compra </button>
+      </Link>
     </div>
   );
 }
