@@ -93,13 +93,18 @@ function Checkout() {
       .then(() => {
         addDoc(collection(db, "ordenes"), oc)
         .then((referencia) => {
-            console.log("llegue aca",referencia.id);
             setOrdenCompra(referencia.id);
             removeItems()
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+            console.error(err)
+            setError('Error al generar la compra')
+         });
       })
-      .catch((err) => console.log(err))
+      .catch((err) => {
+        console.error(err)
+        setError('Error al generar la compra')
+     })
       .finally(()=>{setLoader(false)})
   };
 
