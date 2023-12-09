@@ -46,12 +46,12 @@ function Checkout() {
       setValidated(false);
       return;
     }
-    if (nombre.length < 5 || nombre.length > 20) {
+    if (nombre.length < 3 || nombre.length > 20) {
       setError("Ingrese un nombre valido");
       setValidated(false);
       return;
     }
-    if (apellido.length < 5 || apellido.length > 20) {
+    if (apellido.length < 3 || apellido.length > 20) {
       setError("Ingrese un apellido valido");
       setValidated(false);
       return;
