@@ -1,10 +1,11 @@
+#brandLink{
+    min-width: 280px;
+}
 
 #brandLink a.active{
     text-decoration: none;
     background-color: #2d481e   ;
     color: #c6e1b7;
-    margin: 8px;
-    padding: 8px;
     border-radius: 8px;
 }
 
@@ -12,7 +13,5 @@
     color: #16240f;
     font-size: larger;
     text-decoration: none;
-    margin: 8px;
-    padding: 8px;
     border-radius: 8px;
 }

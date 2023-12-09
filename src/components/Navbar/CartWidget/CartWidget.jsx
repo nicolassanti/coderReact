@@ -7,12 +7,12 @@ import { useContext } from 'react'
 
 function CartWidget() {
 
-  const {cart, getTotalItems} = useContext(CartContext)
+  const {totalItems} = useContext(CartContext)
 
 
   return (
     <div id='cartWidget'>
-    <label>{getTotalItems(cart)}</label>
+    <label>{totalItems}</label>
       <Link to={"/carrito"}>
         <img className='carrito' src={cartImg} alt='imagen de carrito'/>
       </Link>

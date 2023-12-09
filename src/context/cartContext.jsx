@@ -5,21 +5,26 @@ export const CartContext = createContext()
 export const CartProvider = ({children}) => {
 
     const [cart,setCart] = useState([])
+    const [totalItems,setTotalItems] = useState(0)
+    const [totalPrice,setTotalPrice] = useState(0)
     
     const addToCart = (item) =>{
       if (!isInCart(item.prod.id)) {
         setCart((prev)=>[...prev,item])
+        setTotalItems(prev=>prev+item.cantidad)
+        setTotalPrice(prev=>prev+(item.cantidad*item.prod.price))
       } else {
-        console.log("producto ya esta");
-      /*  let itemActual= cart.filter((i)=>{
-          i.id==prod.id
-        })
-        console.log("itemActual: " + itemActual);
-        console.log("cantActual: " + itemActual.cantidad);
-        console.log("cantAgregada",prod.cant);
-        itemActual.cantidad+=prod.cantidad */
+    let cartUpdated =cart.map((i)=>{
+       if (i.prod.id===item.prod.id) {
+        return {...i,cantidad:item.cantidad+i.cantidad};     
+       } else{
+        return {...i}
+       }
+      })
+      setCart(cartUpdated);
+      setTotalItems(prev=>prev+item.cantidad)
+      setTotalPrice(prev=>prev+(item.cantidad*item.prod.price))
       }
-
     } 
 
     const isInCart=(itemId)=>{
@@ -28,37 +33,36 @@ export const CartProvider = ({children}) => {
       });
     }
 
-    const getTotalItems = (cart) =>{
-      let total=0
-      cart.forEach(item => {
-        total += item.cantidad
-      });
-      return total
+/*     const getTotalItemsPrice = (cart) =>{
+    } */
+
+    const removeItem = (item) =>{
+      let cartFiltrado= cart.filter((i) => i.prod.id!==item.prod.id);
+      setCart(cartFiltrado)
+      setTotalItems(prev=>prev-item.cantidad)
+      setTotalPrice(prev=>prev-(item.cantidad*item.prod.price))
     }
 
-    const getTotalItemsPrice = (cart) =>{
-    console.log(cart);
-    }
-    const removeItem = (id) =>{
-      let cartFiltrado= cart.filter((item) =>{
-      return  item.prod.id!==id      
-      });
-      setCart(cartFiltrado)
-    }
     const removeItems = () =>{
       setCart([])
+      setTotalItems(0)
+      setTotalPrice(0)
     }
 
+    const cantParcial = (item) =>{
+      return item.prod.price * item.cantidad
+    }
 
   return (
     <CartContext.Provider value={{
                                 cart,
+                                totalItems,
+                                totalPrice,
                                 setCart,
                                 addToCart,
-                                isInCart,
-                                getTotalItems,
+                                cantParcial,
                                 removeItems,
-                                getTotalItemsPrice,
+                                //getTotalItemsPrice,
                                 removeItem
                                 }}>
         {children}
